@@ -1,0 +1,27 @@
+{
+  "cultura": "Milho",
+  "descricao": "O milho é uma das culturas mais produzidas no Brasil, sendo usado para alimentação humana, animal e também na indústria. É uma planta exigente em luz, nutrientes e água, principalmente em fases críticas do desenvolvimento.",
+  "climaIdeal": "O milho se adapta melhor a temperaturas entre 20°C e 30°C. Precisa de boa luminosidade e disponibilidade de água, especialmente durante a germinação, florescimento e enchimento dos grãos.",
+  "soloRecomendado": "Solos profundos, férteis, bem drenados e ricos em matéria orgânica são ideais para o milho. O pH recomendado geralmente fica entre 5,5 e 6,5.",
+  "epocaPlantio": "A época de plantio depende da região e do regime de chuvas. Normalmente, o milho é plantado no início do período chuvoso ou em segunda safra após a colheita da soja.",
+  "dicasManejo": [
+    "Fazer análise do solo para definir a adubação correta.",
+    "Usar sementes certificadas e adaptadas à região.",
+    "Garantir bom espaçamento entre plantas para evitar competição.",
+    "Controlar plantas daninhas nas primeiras semanas após a emergência.",
+    "Acompanhar a necessidade de nitrogênio, nutriente muito importante para o milho."
+  ],
+  "cuidados": [
+    "Monitorar pragas como lagarta-do-cartucho, percevejos e cigarrinhas.",
+    "Observar sintomas de doenças foliares.",
+    "Evitar deficiência hídrica no período de florescimento.",
+    "Não atrasar a colheita para evitar perdas de qualidade dos grãos."
+  ],
+  "sugestoes": [
+    "Escolha híbridos adequados ao objetivo da produção.",
+    "Planeje a adubação de acordo com a produtividade esperada.",
+    "Faça rotação de culturas para melhorar a saúde do solo.",
+    "Use cobertura vegetal para conservar a umidade do solo.",
+    "Realize o monitoramento frequente da lavoura."
+  ]
+}
