@@ -1,7 +1,6 @@
-// Variáveis globais usadas pela parte da IA
-// Elas guardam qual cultura foi selecionada e os dados carregados do arquivo JSON.
-// Assim, quando o usuário fizer uma pergunta para a IA, o sistema saberá
-// sobre qual cultura ele está perguntando.
+// Variáveis globais usadas pela parte da IA.
+// Elas guardam a cultura selecionada e os dados carregados do JSON.
+// Assim, quando o usuário consultar a IA, o sistema saberá sobre qual cultura responder.
 let culturaAtual = null;
 let dadosCulturaAtual = null;
 
@@ -20,9 +19,9 @@ async function carregarCultura(cultura) {
     const dados = await resposta.json();
 
     // Parte importante para a IA:
-    // Aqui guardamos a cultura selecionada e todo o conteúdo do JSON.
-    // Esses dados serão enviados junto com a pergunta do usuário para o backend,
-    // permitindo que a IA responda com base na cultura escolhida.
+    // Guardamos a cultura selecionada e o conteúdo do JSON.
+    // Esses dados serão enviados junto com a pergunta do usuário
+    // para o arquivo PHP agrinho_openai.php.
     culturaAtual = cultura;
     dadosCulturaAtual = dados;
 
@@ -77,13 +76,11 @@ function mostrarInformacoes(dados) {
 }
 
 // Função responsável por consultar a IA.
-// Ela pega a chave temporária digitada pelo usuário,
-// a pergunta feita e os dados da cultura selecionada.
-// Depois envia tudo para o backend na rota /api/orientar.
-//
-// Importante:
-// A chave não é salva no navegador.
-// Depois da consulta, o campo da chave é limpo.
+// Ela envia para o PHP:
+// 1. a chave temporária digitada pelo usuário;
+// 2. a cultura selecionada;
+// 3. os dados do arquivo JSON;
+// 4. a pergunta digitada.
 async function consultarIa() {
   const chaveIa = document.getElementById("chaveIa").value.trim();
   const perguntaIa = document.getElementById("perguntaIa").value.trim();
@@ -112,7 +109,7 @@ async function consultarIa() {
   respostaIa.textContent = "Consultando a IA...";
 
   try {
-    const resposta = await fetch("/api/orientar", {
+    const resposta = await fetch("https://ceducap.com.br/ia/agrinho_openai.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -125,6 +122,12 @@ async function consultarIa() {
       })
     });
 
+    const tipoConteudo = resposta.headers.get("content-type");
+
+    if (!tipoConteudo || !tipoConteudo.includes("application/json")) {
+      throw new Error("O servidor PHP não retornou JSON válido.");
+    }
+
     const resultado = await resposta.json();
 
     if (!resposta.ok) {
@@ -134,11 +137,12 @@ async function consultarIa() {
     respostaIa.textContent = resultado.resposta;
 
     // Limpa a chave depois da consulta.
-    // Isso ajuda a evitar que ela fique visível ou armazenada no campo.
+    // Ela não fica salva no sistema nem permanece no campo.
     document.getElementById("chaveIa").value = "";
 
   } catch (erro) {
     respostaIa.classList.add("erro");
     respostaIa.textContent = "Erro: " + erro.message;
+    console.error(erro);
   }
 }
