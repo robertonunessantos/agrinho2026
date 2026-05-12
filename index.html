@@ -24,6 +24,29 @@
     <section id="resultado" class="resultado">
       <p>Escolha uma cultura para visualizar as recomendações.</p>
     </section>
+    <section class="area-ia">
+  <h2>Assistente com IA</h2>
+
+  <p>
+    Digite uma chave temporária de IA para receber uma orientação personalizada.
+    A chave será usada somente nesta consulta.
+  </p>
+
+  <input 
+    type="password" 
+    id="chaveIa" 
+    placeholder="Digite sua chave temporária de IA"
+  >
+
+  <textarea 
+    id="perguntaIa" 
+    placeholder="Exemplo: Como melhorar o manejo dessa cultura em solo arenoso?"
+  ></textarea>
+
+  <button onclick="consultarIa()">Consultar IA</button>
+
+  <div id="respostaIa" class="resposta-ia"></div>
+</section>
   </main>
 
   <script src="script.js"></script>
