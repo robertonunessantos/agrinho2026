@@ -1,0 +1,27 @@
+{
+  "cultura": "Soja",
+  "descricao": "A soja é uma cultura de grande importância econômica, utilizada na produção de óleo, farelo, ração animal e diversos produtos industriais. É uma planta que exige bom planejamento, manejo correto do solo e controle eficiente de pragas e doenças.",
+  "climaIdeal": "A soja se desenvolve melhor em temperaturas entre 20°C e 30°C. A cultura precisa de boa disponibilidade de água, principalmente nas fases de florescimento e enchimento de grãos.",
+  "soloRecomendado": "Solos bem drenados, corrigidos, férteis e com boa estrutura física são recomendados para a soja. O pH ideal geralmente fica entre 5,5 e 6,5.",
+  "epocaPlantio": "A época de plantio varia conforme a região e o zoneamento agrícola. Geralmente, o plantio ocorre no período chuvoso, respeitando a janela recomendada para cada localidade.",
+  "dicasManejo": [
+    "Realizar análise e correção do solo antes do plantio.",
+    "Utilizar sementes certificadas e tratadas.",
+    "Fazer inoculação com bactérias fixadoras de nitrogênio.",
+    "Controlar plantas daninhas antes e depois da emergência da soja.",
+    "Acompanhar o desenvolvimento da lavoura em todas as fases."
+  ],
+  "cuidados": [
+    "Monitorar pragas como percevejos, lagartas e mosca-branca.",
+    "Observar doenças como ferrugem asiática, oídio e mancha-alvo.",
+    "Evitar compactação do solo.",
+    "Respeitar o vazio sanitário da soja quando aplicável à região."
+  ],
+  "sugestoes": [
+    "Escolha cultivares adaptadas à sua região.",
+    "Faça rotação de culturas com milho, braquiária ou outras espécies.",
+    "Mantenha boa cobertura do solo para reduzir erosão.",
+    "Realize o manejo integrado de pragas.",
+    "Planeje a colheita no ponto ideal para reduzir perdas."
+  ]
+}
