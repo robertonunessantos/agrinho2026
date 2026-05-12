@@ -1,0 +1,27 @@
+{
+  "cultura": "Feijão",
+  "descricao": "O feijão é uma cultura alimentar muito importante, bastante cultivada em pequenas, médias e grandes propriedades. Possui ciclo relativamente curto e exige atenção especial ao solo, água e controle de pragas.",
+  "climaIdeal": "O feijão se desenvolve melhor em temperaturas entre 18°C e 30°C. Temperaturas muito baixas ou muito altas podem prejudicar a germinação, o florescimento e a formação das vagens.",
+  "soloRecomendado": "Solos bem drenados, férteis, com boa quantidade de matéria orgânica e pH entre 5,5 e 6,5 são os mais indicados para o cultivo do feijão.",
+  "epocaPlantio": "A época de plantio pode variar conforme a região. Geralmente, o feijão pode ser plantado na safra das águas, safra da seca ou safra de inverno, desde que haja disponibilidade adequada de água.",
+  "dicasManejo": [
+    "Realizar análise do solo antes do plantio.",
+    "Fazer correção da acidez do solo quando necessário.",
+    "Utilizar sementes de boa qualidade e com boa germinação.",
+    "Evitar excesso de água, pois o encharcamento prejudica as raízes.",
+    "Controlar plantas daninhas principalmente no início do desenvolvimento da cultura."
+  ],
+  "cuidados": [
+    "Monitorar a presença de pragas como mosca-branca, vaquinha e lagartas.",
+    "Observar sinais de doenças como antracnose, ferrugem e mofo-branco.",
+    "Evitar plantios muito adensados para melhorar a circulação de ar.",
+    "Fazer rotação de culturas para reduzir problemas no solo."
+  ],
+  "sugestoes": [
+    "Utilize variedades adaptadas à sua região.",
+    "Mantenha o solo sempre bem preparado e nivelado.",
+    "Faça irrigação controlada em períodos de estiagem.",
+    "Acompanhe o desenvolvimento da lavoura semanalmente.",
+    "Planeje a colheita quando as vagens estiverem secas e os grãos firmes."
+  ]
+}
