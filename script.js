@@ -83,16 +83,11 @@ function mostrarInformacoes(dados) {
 // 4. a pergunta digitada.
 async function consultarIa() {
   const chaveIa = document.getElementById("chaveIa").value.trim();
+  const culturaIa = document.getElementById("culturaIa").value.trim();
   const perguntaIa = document.getElementById("perguntaIa").value.trim();
   const respostaIa = document.getElementById("respostaIa");
 
   respostaIa.classList.remove("erro");
-
-  if (!dadosCulturaAtual) {
-    respostaIa.classList.add("erro");
-    respostaIa.textContent = "Selecione uma cultura antes de consultar a IA.";
-    return;
-  }
 
   if (!chaveIa) {
     respostaIa.classList.add("erro");
@@ -100,9 +95,15 @@ async function consultarIa() {
     return;
   }
 
+  if (!culturaIa) {
+    respostaIa.classList.add("erro");
+    respostaIa.textContent = "Digite o nome da cultura agrícola que deseja consultar.";
+    return;
+  }
+
   if (!perguntaIa) {
     respostaIa.classList.add("erro");
-    respostaIa.textContent = "Digite uma pergunta para a IA.";
+    respostaIa.textContent = "Digite uma pergunta relacionada à agricultura.";
     return;
   }
 
@@ -116,8 +117,7 @@ async function consultarIa() {
       },
       body: JSON.stringify({
         chaveIa: chaveIa,
-        cultura: culturaAtual,
-        dadosCultura: dadosCulturaAtual,
+        cultura: culturaIa,
         pergunta: perguntaIa
       })
     });
@@ -136,8 +136,6 @@ async function consultarIa() {
 
     respostaIa.textContent = resultado.resposta;
 
-    // Limpa a chave depois da consulta.
-    // Ela não fica salva no sistema nem permanece no campo.
     document.getElementById("chaveIa").value = "";
 
   } catch (erro) {
