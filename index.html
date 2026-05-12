@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Sugestões Agrícolas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Sistema de Sugestões Agrícolas</h1>
+
+    <p class="descricao">
+      Selecione uma cultura para receber informações, dicas e sugestões de manejo.
+    </p>
+
+    <section class="opcoes">
+      <button onclick="carregarCultura('fijao')">Feijão</button>
+      <button onclick="carregarCultura('milho')">Milho</button>
+      <button onclick="carregarCultura('soja')">Soja</button>
+    </section>
+
+    <section id="resultado" class="resultado">
+      <p>Escolha uma cultura para visualizar as recomendações.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
