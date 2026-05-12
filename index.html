@@ -2,8 +2,11 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sistema de Sugestões Agrícolas</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,9 +19,17 @@
     </p>
 
     <section class="opcoes">
-      <button onclick="carregarCultura('feijao')">Feijão</button>
-      <button onclick="carregarCultura('milho')">Milho</button>
-      <button onclick="carregarCultura('soja')">Soja</button>
+      <button type="button" onclick="carregarCultura('feijao')">
+        Feijão
+      </button>
+
+      <button type="button" onclick="carregarCultura('milho')">
+        Milho
+      </button>
+
+      <button type="button" onclick="carregarCultura('soja')">
+        Soja
+      </button>
     </section>
 
     <section id="resultado" class="resultado">
@@ -29,22 +40,31 @@
       <h2>Assistente com IA</h2>
 
       <p>
-        Digite uma chave temporária de IA para receber uma orientação personalizada.
-        A chave será usada somente nesta consulta.
+        Depois de selecionar uma cultura, você pode fazer uma pergunta para receber
+        uma orientação personalizada com base nas informações do arquivo JSON.
       </p>
 
+      <p class="aviso-ia">
+        A chave temporária será usada apenas nesta consulta e não ficará salva no sistema.
+      </p>
+
+      <label for="chaveIa">Chave temporária de IA</label>
       <input 
         type="password" 
         id="chaveIa" 
         placeholder="Digite sua chave temporária de IA"
+        autocomplete="off"
       >
 
+      <label for="perguntaIa">Sua pergunta</label>
       <textarea 
         id="perguntaIa" 
         placeholder="Exemplo: Como melhorar o manejo dessa cultura em solo arenoso?"
       ></textarea>
 
-      <button onclick="consultarIa()">Consultar IA</button>
+      <button type="button" onclick="consultarIa()">
+        Consultar IA
+      </button>
 
       <div id="respostaIa" class="resposta-ia"></div>
     </section>
